@@ -1,0 +1,19 @@
+// Given a long long integer representing a 10-digit phone number, output the area code, prefix, and line number using the format (800) 555-1212.
+
+// Ex: If the input is: 8008161212
+
+#include <iostream>
+using namespace std;
+
+int main() {
+   long long phoneNum;
+   int left;
+   
+   cin >> phoneNum;
+   
+   cout << "(" << phoneNum / 10000000 << ") "; 
+   left = phoneNum / 10000;
+   cout << left % 1000 << "-" << phoneNum % 10000 << endl;
+
+   return 0;
+}
