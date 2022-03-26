@@ -1,0 +1,32 @@
+*/ Write a program whose input is a character and a string, and whose output indicates the number of times the character appears in the string. The output should include the input character and use the plural form, n's, if the number of times the characters appears is not exactly 1.
+Ex: If the input is:
+n Monday
+the output is:
+1 n  /*
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+   char user;
+   string str1; 
+   int count = 0;
+	
+	cin >> user;
+	getline(cin, str1);
+	
+	for (int i = 0; i < str1.length(); i = i + 1) {
+		if (str1[i] == user)
+			count = count + 1;
+	}
+	if (count == 1)
+	   cout << "1 " << user << endl;
+	else if (count != 1)
+		cout << count << " " << user <<"'s" << endl;
+	else
+		cout << user << endl;
+	
+
+   return 0;
+}
