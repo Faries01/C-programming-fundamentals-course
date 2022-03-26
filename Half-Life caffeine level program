@@ -1,0 +1,27 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+   double caffeine;  // "double" supports floating-point like 75.5, versus int for integers like 75.
+   
+   cin >> caffeine;
+   cout << fixed << setprecision(2); // include in <iomanip> header file, displays output with 2 decimal places. 
+
+   caffeine = caffeine / 2;
+   cout << "After 6 hours: ";
+   cout << caffeine;
+   cout << " mg" << endl;
+
+   caffeine = caffeine / 2;
+   cout << "After 12 hours: ";
+   cout << caffeine;
+   cout << " mg" << endl;
+   
+   caffeine = caffeine / 2;
+   cout << "After 24 hours: ";
+   cout << caffeine / 2;
+   cout << " mg" << endl;
+
+   return 0;
+}
