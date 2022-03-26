@@ -1,0 +1,36 @@
+// Many documents use a specific format for a person's name. Write a program whose input is: firstName middleName lastName
+// and whose output is: lastName, firstInitial.middleInitial.
+
+*/ Ex: If the input is:
+
+Pat Silly Doe
+the output is:
+
+Doe, P.S. /*
+
+#include <iostream>
+#include <string>
+#include <iomanip>
+#include <cstdlib>
+
+
+using namespace std;
+
+int main() {
+   string firstname;
+   string midname;
+   string lastname;
+   
+   cin >> firstname;
+   cin >> midname;
+   cin >> lastname;
+   
+   if (lastname.length() <= 0) {
+      cout << midname << ", " << firstname[0] << "." << endl;
+   return 0;
+   }
+   
+   cout << lastname << ", " << firstname[0] << "." << midname[0] << "." << endl;
+ 
+   return 0;
+}
