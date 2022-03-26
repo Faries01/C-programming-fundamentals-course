@@ -1,0 +1,75 @@
+*/ Write a program with total change amount as an integer input, and output the change using the fewest coins, one coin type per line. 
+The coin types are Dollars, Quarters, Dimes, Nickels, and Pennies. 
+Use singular and plural coin names as appropriate, like 1 Penny vs. 2 Pennies. /*
+
+*/ Ex: If the input is: 45 the output is:
+1 Quarter
+2 Dimes  /*
+
+#include <cmath>
+#include <cstdlib>
+#include <iostream>
+using namespace std;
+
+int main () {
+   int total;
+   int dollars;
+   int quarters;
+   int dimes;
+   int nickels;
+   int pennies;
+   
+   cin >> total;
+      if (total <= 0) {
+         cout << "No change" << endl;
+         return 0;
+      }
+   
+    dollars = total / 100;
+    quarters = (total % 100) / 25;
+    dimes = (total % 100 % 25) / 10;
+    nickels = (total % 100 % 25 % 10) / 5;
+    pennies =  total % 100 % 5;
+   
+   if (dollars == 1) { 
+      cout << dollars << " Dollar" << endl;
+   }
+   else if (dollars >= 2) {
+      cout << dollars << " Dollars" << endl;
+   }
+
+   if (quarters == 1) {
+   cout << quarters << " Quarter" << endl;
+   }
+   
+   else if (quarters >= 2) {
+      cout << quarters << " Quarters" << endl;
+   }
+   if (dimes == 1) {
+      cout << dimes << " Dime" << endl;
+   }
+   
+   else if (dimes >= 2) {
+      cout << dimes << " Dimes" << endl;
+   }
+   
+   if (nickels == 1) {
+      cout << nickels << " Nickel" << endl;
+   }
+   else if (nickels >= 2) {
+      cout << nickels << " Nickels" << endl;
+   }
+      
+   if (pennies == 1) {
+      cout << pennies << " Penny" << endl;
+   }
+   else if (pennies >= 2) {
+      cout << pennies << " Pennies" << endl;
+   }
+   
+   
+   
+   return 0;
+}
+
+
